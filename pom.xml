@@ -7,11 +7,44 @@
     <groupId>org.example</groupId>
     <artifactId>SubscriptionBillingProject</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
 
-    <properties>
+    <!-- JUnit 5 Dependency -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.10.1</version>
+        <scope>test</scope>
+    </dependency>
+
+</dependencies>
+<build>
+    <plugins>
+    <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>3.1.0</version>
+    <configuration>
+        <mainClass>com.billing.Main</mainClass>
+    </configuration>
+</plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+        </plugin>
+    </plugins>
+</build>
+
+
+
+
+
+    <!-- <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    </properties> -->
 
 </project>

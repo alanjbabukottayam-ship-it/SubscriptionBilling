@@ -16,9 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
-        try {
+        try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Enter your name: ");
             String userName = sc.nextLine();
 
@@ -60,8 +58,6 @@ public class Main {
 
         } catch (InvalidPaymentException e) {
             System.out.println(e.getMessage());
-        } finally {
-            sc.close();
         }
     }
 }
